@@ -1,3 +1,25 @@
-<p>
-  login-reg works!
-</p>
+<div class="wrapper">
+  <div *ngIf='errors' class="errors">
+          <ul>
+            <li *ngFor='let error of errors'>{{ error }}</li>
+          </ul>
+        </div>
+<div class="reg">
+<h1>Registration</h1>
+<form (submit)='submitRegister()'>
+    <p>First Name: <input minlength='3' #first='ngModel' type="text" name="first_name" [(ngModel)]='registerForm.first_name'placeholder="Peter"></p>
+    <p>Last Name: <input minlength='3' #last='ngModel' type="text" name="last_name" [(ngModel)]='registerForm.last_name'placeholder="Parker"></p>
+    <p>E-Mail: <input [(ngModel)]='email' type="text" id="mail" name="email" [(ngModel)]='registerForm.email'placeholder="therealspiderman@mail.com"></p>
+    <p>Password: <input type="password" [(ngModel)]='pword' name="password" [(ngModel)]='registerForm.password'placeholder="password"></p>
+    <p><input type="submit" value="Register"></p>
+</form>
+</div>
+<div class="log">
+<h1>Login</h1>
+<form (submit)='submitLogin()'>
+    <p>Eamil: <input type="text" name="email" [(ngModel)]='loginForm.email'></p>
+    <p>Password: <input type="password" name="password" [(ngModel)]='loginForm.password'></p>
+    <p><input type="submit" value="Login to Account"></p>
+</form>
+</div>
+</div>

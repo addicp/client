@@ -10,12 +10,10 @@ export class UserService {
   user: any = {
     first_name: null,
     id: null,
-    gold: null,
   }
   user$ = new BehaviorSubject<any>({
     first_name: null,
     id: null,
-    gold: null,
   })
   baseURL: string = 'http://localhost:8000/users'
   constructor(private http: HttpClient) { }

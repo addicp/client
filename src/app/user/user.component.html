@@ -1,3 +1,25 @@
-<p>
-  user works!
-</p>
+<div class="user">
+  <h3>All the songs in our hub</h3>
+  <table class='table'>
+    <tr>
+      <th style="width: 250px">Artist</th>
+      <th style="width: 250px">Title</th>
+      <th style="width: 75px"># of adds</th>
+      <th style="width: 75px">add to playlist</th>
+    </tr>
+    <tr>
+      <td>{{ song.artist }}</td>
+      <td>{{ song.title }}</td>
+      <td>{{ song.playlist }}</td>
+      <td> <button (click)='addToList()'>add</button></td>
+    </tr>
+  </table>
+</div>
+<div class="addSong">
+  <h3>Add a song</h3>
+  <form action="">
+    <p>Artist: <input type="text" placeholder='OAR'></p>
+    <p>Title: <input type="text" placeholder='Crazy night of Poker'></p>
+    <button button (click)='addSong()'>Add Song</button>
+  </form>
+</div>

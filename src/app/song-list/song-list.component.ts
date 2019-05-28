@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SongListService } from '../song-list.service';
 
 @Component({
   selector: 'app-song-list',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SongListComponent implements OnInit {
 
-  constructor() { }
+  songs: object[];
+
+  constructor(private songListService: SongListService) { }
+
+  addToList() {
+
+  }
+
+  addSong() {
+    
+  }
 
   ngOnInit() {
+    let obs = this.songListService.getAllSongs()
+    obs.subscribe((data) => {
+      this.songs = data
+      console.log(this.songs)
+    })
   }
 
 }

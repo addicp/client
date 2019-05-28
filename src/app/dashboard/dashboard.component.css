@@ -1,0 +1,9 @@
+.header{
+    width: 1000px;
+    display: inline-block;
+    vertical-align: top;
+}
+.header h1, h2{
+    display: inline-block;
+    margin: auto 100px;
+}
